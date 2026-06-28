@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>赵霄 · 数据中心基建工程师 / 算力基础设施</title>
+<meta name="description" content="赵霄 — 一级注册结构工程师,18年大型基建结构设计 + 2年AI全栈自研;求职数据中心/智算中心(AIDC)基建岗。杭州。">
+<style>
+  :root{
+    --bg:#0a0e14; --bg2:#0e141d; --panel:#121a26; --panel2:#0f1620;
+    --border:#1e2a3a; --border2:#28384d;
+    --text:#d7e0ee; --muted:#8a99ad; --dim:#5e6b7d;
+    --accent:#38bdf8; --accent2:#818cf8; --good:#34d399; --warn:#fbbf24;
+    --glow:rgba(56,189,248,.14);
+    --mono:'JetBrains Mono','Fira Code','SF Mono',Consolas,'Courier New',monospace;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei','Hiragino Sans GB',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--text);font-family:var(--sans);
+    line-height:1.7;font-size:15.5px;-webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(1200px 600px at 80% -10%,rgba(129,140,248,.10),transparent 60%),
+      radial-gradient(900px 500px at -10% 10%,rgba(56,189,248,.08),transparent 55%);
+    background-attachment:fixed;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:920px;margin:0 auto;padding:0 22px}
+
+  /* nav */
+  nav{
+    position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
+    background:rgba(10,14,20,.78);border-bottom:1px solid var(--border);
+  }
+  nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+  nav .brand{font-family:var(--mono);font-weight:600;color:var(--text);font-size:14px;white-space:nowrap}
+  nav .brand span{color:var(--accent)}
+  nav .links{display:flex;gap:14px;margin-left:auto;flex-wrap:wrap}
+  nav a{color:var(--muted);font-size:13px;font-family:var(--mono)}
+  nav a:hover{color:var(--text);text-decoration:none}
+  nav a.active{color:var(--accent)}
+
+  /* hero */
+  header.hero{padding:64px 0 40px}
+  .pill{display:inline-block;font-family:var(--mono);font-size:12.5px;color:var(--accent);
+    border:1px solid var(--border2);background:var(--panel2);padding:4px 11px;border-radius:999px;margin-bottom:18px}
+  h1.name{font-size:46px;font-weight:800;letter-spacing:-.5px;line-height:1.1;
+    background:linear-gradient(100deg,var(--text) 20%,var(--accent) 60%,var(--accent2) 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .role{font-family:var(--mono);color:var(--accent2);font-size:17px;margin-top:10px;font-weight:600}
+  .creds{color:var(--muted);margin-top:8px;font-size:14px}
+  .contact{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+  .contact span b{color:var(--text);font-weight:500}
+  .cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:9px 18px;border-radius:8px;font-size:13.5px;font-family:var(--mono);font-weight:600;border:1px solid var(--border2);transition:.18s}
+  .btn.primary{background:linear-gradient(100deg,var(--accent),var(--accent2));color:#06121e;border:none}
+  .btn.primary:hover{filter:brightness(1.08);text-decoration:none;box-shadow:0 6px 24px var(--glow)}
+  .btn.ghost{color:var(--text);background:var(--panel)}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+  .pitch{margin-top:34px;padding:20px 22px;border:1px solid var(--border);border-left:3px solid var(--accent);
+    background:linear-gradient(180deg,var(--panel),var(--panel2));border-radius:10px}
+  .pitch .lbl{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.5px}
+  .pitch p{margin-top:8px;color:var(--text)}
+  .pitch b{color:var(--accent)}
+
+  /* sections */
+  section{padding:34px 0;border-top:1px solid var(--border)}
+  h2{font-size:21px;font-weight:700;margin-bottom:6px;display:flex;align-items:baseline;gap:12px}
+  h2 .idx{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:500}
+  .sec-sub{color:var(--dim);font-size:13px;margin-bottom:18px;font-family:var(--mono)}
+
+  .card{border:1px solid var(--border);background:linear-gradient(180deg,var(--panel),var(--panel2));
+    border-radius:12px;padding:16px 18px;margin-bottom:12px;transition:.18s}
+  .card:hover{border-color:var(--border2);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+  .card h3{font-size:16px;font-weight:700;color:var(--text)}
+  .card h3 .when{float:right;font-family:var(--mono);font-size:12px;color:var(--dim);font-weight:400;margin-top:2px}
+  .card .who{font-family:var(--mono);font-size:12.5px;color:var(--accent2);margin:2px 0 8px}
+  .card p,.card li{color:var(--muted);font-size:14px}
+  .card ul{list-style:none;margin-top:6px}
+  .card ul li{position:relative;padding-left:16px;margin:5px 0}
+  .card ul li::before{content:'▸';position:absolute;left:0;color:var(--accent)}
+  .tagrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .tag{font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px solid var(--border2);
+    background:var(--bg2);padding:2px 9px;border-radius:6px}
+  .tag.bridge{color:var(--good);border-color:rgba(52,211,153,.3);background:rgba(52,211,153,.06)}
+  .tag.hot{color:var(--accent);border-color:rgba(56,189,248,.3);background:rgba(56,189,248,.06)}
+  .hl{color:var(--good);font-family:var(--mono);font-size:12px;font-weight:600}
+
+  .grid{display:grid;gap:12px}
+  @media(min-width:720px){.grid.cols2{grid-template-columns:1fr 1fr}}
+  ul.tight{list-style:none}
+  ul.tight li{position:relative;padding-left:18px;margin:7px 0;color:var(--muted);font-size:14px}
+  ul.tight li::before{content:'▪';position:absolute;left:0;color:var(--accent)}
+  ul.tight li b{color:var(--text);font-weight:600}
+
+  footer{padding:30px 0 50px;border-top:1px solid var(--border);color:var(--dim);font-size:12.5px;font-family:var(--mono);text-align:center}
+  footer a{color:var(--muted)}
+  .kv{display:grid;grid-template-columns:120px 1fr;gap:6px 14px;font-size:14px}
+  .kv dt{color:var(--accent);font-family:var(--mono);font-size:12.5px}
+  .kv dd{color:var(--muted)}
+
+  /* print: clean light for HR save-to-PDF */
+  @media print{
+    body{background:#fff;color:#111;font-size:11pt;background-image:none}
+    nav,.cta,.btn{display:none}
+    .wrap{max-width:100%;padding:0}
+    h1.name{-webkit-text-fill-color:#111;background:none;color:#111}
+    section{border-top:1px solid #ccc;padding:10pt 0}
+    .card,.pitch{border:1px solid #ccc;background:#fff;box-shadow:none;break-inside:avoid}
+    .card p,.card li,ul.tight li,.kv dd,.pitch p,.creds{color:#222}
+    h2,h2 .idx,.card h3,.who,.pill,.role{color:#111!important}
+    .tag{border-color:#999;color:#333;background:#f5f5f5}
+    .tag.bridge{color:#066}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <div class="brand">赵霄 <span>// resume</span></div>
+    <div class="links">
+      <a href="#pitch">定位</a>
+      <a href="#strengths">能力</a>
+      <a href="#work">经历</a>
+      <a href="#ai">AI 实践</a>
+      <a href="#projects">项目</a>
+      <a href="#skills">技能</a>
+      <a href="#honors">荣誉</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header class="hero" id="top">
+    <span class="pill">● 开放看机会 · 数据中心 / 智算中心(AIDC)基建</span>
+    <h1 class="name">赵 霄</h1>
+    <div class="role">数据中心基建工程师 · 算力基础设施</div>
+    <div class="creds">一级注册结构工程师 · 高级工程师 · 注册咨询(投资)工程师 · 浙江大学结构工程硕士 · 18 年大型基建 + 2 年 AI 全栈自研</div>
+    <div class="contact">
+      <span>📍 杭州(本地)</span>
+      <span>📞 <b>13588390028</b></span>
+      <span>✉ <b>154089438@qq.com</b></span>
+      <span>🔗 <a href="https://github.com/zhaoxiao5174-beep" target="_blank" rel="noopener">GitHub: zhaoxiao5174-beep</a> · 演示:<b>待补</b></span>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="./赵霄-简历-DeepSeek-IDC设计规划.pdf" target="_blank">⬇ 下载 PDF 简历</a>
+      <a class="btn ghost" href="#projects">查看代表项目</a>
+    </div>
+
+    <div class="pitch" id="pitch">
+      <div class="lbl">// 我想做的事</div>
+      <p>18 年大型公共建筑结构一线,主持过大跨度钢、抗震超限、加固改造、深基坑与 EPC 综合体;近两年因对 AI 能力边界的好奇,独立全栈自研企业知识库、施工图智能审查、生产管理平台并部署上线。我想把结构、机电与 AI 工程能力结合起来,<b>端到端 own 智算中心的物理基建</b>——重载楼面、液冷结构专项、供配电冗余、BIM 管线深化,并用 AI(数字孪生 / 智能运维)持续压低 PUE 与 GPU-hour 成本:把 DeepSeek 在算法层的成本效率,复刻到物理层。期望参与从 MW 到 GW 级基础设施的规划与建设。</p>
+    </div>
+  </header>
+
+  <!-- 核心能力 -->
+  <section id="strengths">
+    <h2><span class="idx">// 01</span> 核心能力</h2>
+    <p class="sec-sub">结构工程底层深度 × AI 工程化 × 数据中心可迁移</p>
+    <ul class="tight">
+      <li><b>结构设计与把控</b> — 大跨度钢结构/桁架/网架、抗震超限审查、性能化设计、复杂体型(大悬挑/竖向转换/不规则);精通深基坑与整体地下室(单项目地下 9.5 万 m²)。</li>
+      <li><b>加固与改造</b> — 粘钢/碳纤维/增大截面/静力切割;既有建筑功能更新与不停运改造(车辆段盖板、既有 IDC)。</li>
+      <li><b>项目管理</b> — EPC 总承包、多专业协同、设计院—总包—分包统筹;18 年团队管理(结构所所长)。</li>
+      <li><b>数据中心 · 可迁移</b> — 重载楼面承重评估(高密 GPU 柜 20–30+ kN/m²)、抗震乙类设防、大跨度无柱机房、设备基础隔振、机房 MEP 综合 BIM 管线深化;系统学习中 GB 50174 / TIA-942 / Uptime Tier / 液冷 / 高密供电。</li>
+      <li><b>AI 工程化</b> — Vue3+TS / Node+Express+Prisma / FastAPI+Python;LLM 应用(智谱 GLM、Claude;流式、原生工具调用、Agent ReAct、RAG);DXF 图纸解析;已部署上线。</li>
+    </ul>
+  </section>
+
+  <!-- 工作经历 -->
+  <section id="work">
+    <h2><span class="idx">// 02</span> 工作经历</h2>
+    <p class="sec-sub">最新在前</p>
+
+    <div class="card">
+      <h3>中铁二院华东勘察设计有限责任公司 · 结构专业负责人 / 数字化负责人<span class="when">2025.07 — 至今</span></h3>
+      <div class="who">大型基础设施勘察设计央企</div>
+      <ul>
+        <li>代表项目:<b>杭州地铁 6 号线双浦车辆段盖板加固</b>(结构专业负责人,详见项目经验)。</li>
+        <li>承担结构设计与项目负责;主导“AI + 工程”数字化,独立全栈自研知识库、施工图智能审查、生产管理平台(见 AI 实践)。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>浙江省建科建筑设计院有限公司 · 结构专业负责人<span class="when">2025.01 – 2025.06</span></h3>
+      <ul>
+        <li>代表项目:<b>新疆阿克苏新和县新能源汽车循环经济产业园</b>(7 万 m²,结构专业负责人,详见项目经验)。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>汉嘉设计集团股份有限公司(上市)· 建筑四院 · 结构所所长<span class="when">2008.07 – 2024.12</span></h3>
+      <ul>
+        <li>主持大跨度钢 / 抗震超限 / 加固改造 / 深基坑地下室 / EPC 综合体全类型结构设计与品质管控。</li>
+        <li>与境外建筑事务所合作多个标志性项目(华润万象城、高德置地广场、之江银泰、香港置地光环梦中心等)。</li>
+        <li>2020 年集团“优秀青年结构工程师”(全集团 2 位,迄今仅评选一次)、2011 年集团“标兵”(TOP 10)。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AI 工程化实践 -->
+  <section id="ai">
+    <h2><span class="idx">// 03</span> AI 工程化实践</h2>
+    <p class="sec-sub">Claude Code / 智谱 GLM · 独立全栈自研 · 均内部试用 / 部署上线 → 可迁移到 AIDC 智能运维与数字孪生</p>
+
+    <div class="grid cols2">
+      <div class="card">
+        <h3>施工图(结构)智能审查 <span class="hl">[内部试用]</span></h3>
+        <p>多智能体 + L1/L2/L3 三级规则引擎(强条/一般条/专项分层)+ DXF 批注 + 真实审查报告;把图审 SOP 编码为 Agent 可执行流程。</p>
+        <div class="tagrow"><span class="tag">多智能体</span><span class="tag">规则引擎</span><span class="tag">DXF</span><span class="tag bridge">→ AIDC 巡检/故障诊断 Agent</span></div>
+      </div>
+      <div class="card">
+        <h3>企业规范知识库(RAG)<span class="hl">[内部试用]</span></h3>
+        <p>向量数据库 + 大模型 API + Web 前端,规范条文自然语言问答与相似案例检索,支撑设计与审查环节合规速查。</p>
+        <div class="tagrow"><span class="tag">RAG</span><span class="tag">向量库</span><span class="tag">大模型 API</span></div>
+      </div>
+      <div class="card">
+        <h3>部门生产管理平台 <span class="hl">[内部试用]</span></h3>
+        <p>覆盖项目立项、进度、人员调度、图纸校审流程与产值统计,替代手工/表格管理。</p>
+        <div class="tagrow"><span class="tag">Node+Express+Prisma</span><span class="tag">Vue3</span><span class="tag">状态机</span><span class="tag">CI/CD</span></div>
+      </div>
+      <div class="card">
+        <h3>AI 研究与写作平台 <span class="hl">[已上线]</span></h3>
+        <p>全栈一人开发:Vue3+TS(~16k 行)+ FastAPI(~4k 行),接智谱 GLM-5.2(流式+工具调用);9 阶段流水线、反幻觉质量门禁、Agent ReAct、HITL、按用户隔离 + 鉴权。</p>
+        <div class="tagrow"><span class="tag">Vue3+TS</span><span class="tag">FastAPI</span><span class="tag">GLM 流式</span><span class="tag bridge">→ 数字孪生/AIOps</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 代表项目 -->
+  <section id="projects">
+    <h2><span class="idx">// 04</span> 代表项目经验</h2>
+    <p class="sec-sub">均带“数据中心可迁移”桥接 · 最新在前</p>
+
+    <div class="card">
+      <h3>新疆阿克苏新和县新能源汽车循环经济产业园(7 万 m²,结构专业负责人)<span class="when">2025 · 浙江建科</span></h3>
+      <p>园区含智能制造基地、新能源汽车拆解中心、退役材料回收与新兴材料生产中心、研发楼;新建研发楼 + 4 栋标准化厂房及配套基础设施。</p>
+      <ul>
+        <li><span class="hl">技术亮点:</span>大跨度厂房 + 车间大荷载(制造/拆解/回收工艺与设备荷载)+ <b>严寒地区低温钢结构</b>(按低温防脆断选材与焊接节点设计)。</li>
+      </ul>
+      <div class="tagrow"><span class="tag bridge">重载楼面 → DC 机房承重</span><span class="tag bridge">大跨度 → 无柱机房</span><span class="tag bridge">园区基础设施 → IDC 配套</span></div>
+    </div>
+
+    <div class="card">
+      <h3>杭州地铁 6 号线双浦车辆段盖板加固(结构专业负责人)<span class="when">2025 · 中铁二院华东</span></h3>
+      <p>车辆段上盖大跨度重载平台结构加固:大跨度重载楼盖 + 不停运加固 + 轨交机电协同。</p>
+      <div class="tagrow"><span class="tag bridge">大跨度重载平台 → DC 重载机房楼面</span><span class="tag bridge">不停运加固 → 既有 IDC 改造</span></div>
+    </div>
+
+    <div class="card">
+      <h3>香港置地光环梦中心商业综合体(18 万 m²,结构专业负责人)<span class="when">2021 – 至今 · 汉嘉</span></h3>
+      <p>大跨度钢屋盖采光顶与连桥、异形钢“虫洞”、竖向转换、大悬挑;性能化设计 + BIM。</p>
+      <div class="tagrow"><span class="tag bridge">大跨度钢 → 无柱机房</span><span class="tag">性能化</span><span class="tag">BIM</span></div>
+    </div>
+
+    <div class="card">
+      <h3>天津昆仑中心(高烈度 7 度半,98.4m,主要结构设计人员)<span class="when">2012 – 2014 · 汉嘉</span></h3>
+      <p>钢框架-支撑 + 屈曲约束支撑(BRB)+ 轻质混凝土楼板;从动力弹塑性时程分析出发通过抗震超限审查。</p>
+      <div class="tagrow"><span class="tag bridge">抗震超限 → DC 乙类设防</span><span class="tag">BRB</span><span class="tag">动力弹塑性</span></div>
+    </div>
+
+    <div class="card">
+      <h3>杭州之江银泰城大规模改造(34.4 万 m²,结构专业负责人)<span class="when">2019 – 2021 · 汉嘉</span></h3>
+      <p>步行街 → 5 万 m² 钢结构商业综合体;不动基础、从既有承载力重算出发,以最小代价完成加固改造与抗震超限审查。</p>
+      <div class="tagrow"><span class="tag bridge">加固改造 → 既有 IDC 改造</span><span class="tag bridge">降本思维</span></div>
+    </div>
+
+    <div class="card">
+      <h3>衢州鹿鸣未来社区 EPC(43 万 m²,结构设计负责人)<span class="when">2021 – 2023 · 汉嘉</span></h3>
+      <p>含超高层办公、酒店、多层商业街、学校、住宅;EPC 总包模式下的超大型基建协同与全过程管控。</p>
+      <div class="tagrow"><span class="tag">EPC 全流程</span><span class="tag">超大型项目统筹</span></div>
+    </div>
+  </section>
+
+  <!-- 专业技能 -->
+  <section id="skills">
+    <h2><span class="idx">// 05</span> 专业技能</h2>
+    <div class="grid cols2">
+      <dl class="kv">
+        <dt>结构</dt><dd>PKPM / YJK / SAP2000 / ETABS / MIDAS / 3D3S;BIM(Revit)正向设计与管线综合;性能化 / 动力弹塑性。</dd>
+        <dt>算力基建</dt><dd>高密度 GPU 集群(40–120kW+/柜)、液冷(冷板/浸没)、新型供配电(2N/HVDC/微电网/储能)、模块化数据中心、PUE、GB 50174 / TIA-942 / Uptime Tier。</dd>
+      </dl>
+      <dl class="kv">
+        <dt>AI / 数字化</dt><dd>Python、RAG / 向量库、大模型 API、Agent ReAct / 工具循环;Vue3 / TS、Node+Express+Prisma、FastAPI、SQLite、Git / CI-CD;DXF 图纸解析。</dd>
+        <dt>语言 / 资质</dt><dd>CET-6(可读 ASHRAE / Uptime / IEC);一级注册结构工程师、注册咨询(投资)工程师、高级工程师。</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 荣誉科研教育 -->
+  <section id="honors">
+    <h2><span class="idx">// 06</span> 荣誉 · 科研 · 教育</h2>
+    <ul class="tight">
+      <li><b>荣誉</b> — 钱江杯二/三等奖、西湖杯二等奖及三等奖 6 项、浙江省 BIM 协同奖;2020 集团优秀青年结构工程师(全集团 2 位)、2011 集团标兵(TOP 10);2014 杭州市自然科学优秀学术成果三等奖。</li>
+      <li><b>科研</b> — 第一作者论文 7 篇(《建筑结构》《工业建筑》《施工技术》等)+ 实用新型专利 2 项(弦支穹顶节点构造)。</li>
+      <li><b>教育</b> — 浙江大学 结构工程 硕士(2006–2008)/ 土木工程 本科(2002–2006)。</li>
+    </ul>
+  </section>
+
+  <footer>
+    赵霄 · 杭州 · 13588390028 · 154089438@qq.com<br>
+    本页为可交互数字简历 · 单文件自包含 · <a href="./赵霄-简历-DeepSeek-IDC设计规划.pdf">下载 PDF 版</a>
+  </footer>
+</div>
+
+<script>
+  // active nav highlight
+  const links=[...document.querySelectorAll('nav a')];
+  const map={};links.forEach(a=>map[a.getAttribute('href').slice(1)]=a);
+  const io=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){links.forEach(a=>a.classList.remove('active'));const id=e.target.id;if(map[id])map[id].classList.add('active')}
+  }),{rootMargin:'-45% 0px -50% 0px'});
+  ['pitch','strengths','work','ai','projects','skills','honors'].forEach(id=>{const el=document.getElementById(id);if(el)io.observe(el)});
+</script>
+</body>
+</html>
